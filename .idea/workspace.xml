@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6ab4085b-af77-416e-9977-6e8e36880c35" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file:///usr/local/go" />
+  <component name="ProjectId" id="1mmLgQck0Q1NOk3TtWVOIIgy1sb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/github.com" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/vendor/github.com" />
+      <recent name="$PROJECT_DIR$/vendor/github.com/hyperledger" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build node.go">
+    <configuration name="go build fabricfork" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="fabricfork" />
+      <working_directory value="$PROJECT_DIR$" />
+      <envs>
+        <env name="FABRIC_LOGGING_SPEC" value="DEBUG" />
+        <env name="CORE_PEER_TLS_ENABLED" value="true" />
+        <env name="CORE_PEER_PROFILE_ENABLED" value="true" />
+        <env name="CORE_PEER_TLS_CERT_FILE" value="$PROJECT_DIR$/../github.com/hyperledger/fabric/scripts/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/server.crt" />
+        <env name="CORE_PEER_TLS_KEY_FILE" value="$PROJECT_DIR$/../github.com/hyperledger/fabric/scripts/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/server.key" />
+        <env name="CORE_PEER_TLS_ROOTCERT_FILE" value="$PROJECT_DIR$/../github.com/hyperledger/fabric/scripts/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" />
+        <env name="CORE_PEER_ID" value="peer0.org1.example.com" />
+        <env name="CORE_PEER_ADDRESS" value="peer0.org1.example.com:7051" />
+        <env name="CORE_PEER_LISTENADDRESS" value="0.0.0.0:7051" />
+        <env name="CORE_PEER_CHAINCODEADDRESS" value="peer0.org1.example.com:7052" />
+        <env name="CORE_PEER_CHAINCODELISTENADDRESS" value="0.0.0.0:7052" />
+        <env name="CORE_PEER_GOSSIP_BOOTSTRAP" value="peer0.org1.example.com:7051" />
+        <env name="CORE_PEER_GOSSIP_EXTERNALENDPOINT" value="peer0.org1.example.com:7051" />
+        <env name="CORE_PEER_LOCALMSPID" value="Org1MSP" />
+        <env name="FABRIC_LOG_PERSISTENCE" value="true" />
+        <env name="FABRIC_LOG_PERSISTENCE_PATH" value="$PROJECT_DIR$/../github.com/hyperledger/fabric/scripts/fabric-samples/test-network/peer/logs" />
+        <env name="FABRIC_CFG_PATH" value="$PROJECT_DIR$/../github.com/hyperledger/fabric/scripts/fabric-samples/config" />
+        <env name="CORE_PEER_MSPCONFIGPATH" value="$PROJECT_DIR$/../github.com/hyperledger/fabric/scripts/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp" />
+        <env name="CORE_PEER_FILESYSTEMPATH" value="$PROJECT_DIR$/../github.com/hyperledger/fabric/scripts/fabric-samples/test-network/prodution" />
+      </envs>
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$" />
+      <package value="fabricfork" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build node.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="fabricfork" />
+      <working_directory value="$PROJECT_DIR$" />
+      <envs>
+        <env name="FABRIC_LOGGING_SPEC" value="DEBUG" />
+        <env name="CORE_PEER_TLS_ENABLED" value="true" />
+        <env name="CORE_PEER_PROFILE_ENABLED" value="true" />
+        <env name="CORE_PEER_TLS_CERT_FILE" value="$PROJECT_DIR$/../github.com/hyperledger/fabric/scripts/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/server.crt" />
+        <env name="CORE_PEER_TLS_KEY_FILE" value="$PROJECT_DIR$/../github.com/hyperledger/fabric/scripts/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/server.key" />
+        <env name="CORE_PEER_TLS_ROOTCERT_FILE" value="$PROJECT_DIR$/../github.com/hyperledger/fabric/scripts/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" />
+        <env name="CORE_PEER_ID" value="peer0.org1.example.com" />
+        <env name="CORE_PEER_ADDRESS" value="peer0.org1.example.com:7051" />
+        <env name="CORE_PEER_LISTENADDRESS" value="0.0.0.0:7051" />
+        <env name="CORE_PEER_CHAINCODEADDRESS" value="peer0.org1.example.com:7052" />
+        <env name="CORE_PEER_CHAINCODELISTENADDRESS" value="0.0.0.0:7052" />
+        <env name="CORE_PEER_GOSSIP_BOOTSTRAP" value="peer0.org1.example.com:7051" />
+        <env name="CORE_PEER_GOSSIP_EXTERNALENDPOINT" value="peer0.org1.example.com:7051" />
+        <env name="CORE_PEER_LOCALMSPID" value="Org1MSP" />
+        <env name="FABRIC_LOG_PERSISTENCE" value="true" />
+        <env name="FABRIC_LOG_PERSISTENCE_PATH" value="$PROJECT_DIR$/../github.com/hyperledger/fabric/scripts/fabric-samples/test-network/peer/logs" />
+        <env name="FABRIC_CFG_PATH" value="$PROJECT_DIR$/../github.com/hyperledger/fabric/scripts/fabric-samples/config" />
+        <env name="CORE_PEER_MSPCONFIGPATH" value="$PROJECT_DIR$/../github.com/hyperledger/fabric/scripts/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp" />
+        <env name="CORE_PEER_FILESYSTEMPATH" value="$PROJECT_DIR$/../github.com/hyperledger/fabric/scripts/fabric-samples/test-network/prodution" />
+      </envs>
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/cmd/node.go" />
+      <package value="fabricfork" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.go build fabricfork" />
+      <item itemvalue="Go Build.go build node.go" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build node.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/msp/mspimplsetup.go</url>
+          <line>245</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
