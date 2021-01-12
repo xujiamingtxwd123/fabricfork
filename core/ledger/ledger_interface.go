@@ -2,6 +2,7 @@ package ledger
 
 import (
 	"github.com/hyperledger/fabric-protos-go/common"
+	"github.com/hyperledger/fabric-protos-go/ledger/rwset"
 	"github.com/hyperledger/fabric-protos-go/peer"
 	"time"
 )
@@ -12,6 +13,37 @@ type Config struct {
 	PrivateDataConfig *PrivateDataConfig
 	HistoryDBConfig   *HistoryDBConfig
 	StateDBConfig     *StateDBConfig
+}
+
+type MissingPvtData struct {
+	Namespace  string
+	Collection string
+	IsEligible bool
+}
+
+type TxPvtData struct {
+	SeqInBlock uint64
+	WriteSet   *rwset.TxPvtReadWriteSet
+}
+
+// TxPvtDataMap is a map from txNum to the pvtData
+type TxPvtDataMap map[uint64]*TxPvtData
+
+// TxMissingPvtDataMap is a map from txNum to the list of
+// missing pvtData
+type TxMissingPvtDataMap map[uint64][]*MissingPvtData
+
+type PvtCollFilter map[string]bool
+
+// PvtNsCollFilter specifies the tuple <namespace, PvtCollFilter>
+type PvtNsCollFilter map[string]PvtCollFilter
+
+func (filter PvtNsCollFilter) Has(ns string, coll string) bool {
+	collFilter, ok := filter[ns]
+	if !ok {
+		return false
+	}
+	return collFilter[coll]
 }
 
 type HistoryDBConfig struct {
