@@ -279,9 +279,9 @@ func (msp *bccspmsp) setupSigningIdentity(conf *msppb.FabricMSPConfig) error {
 		expirationTime := sid.ExpiresAt()
 		now := time.Now()
 		if expirationTime.After(now) {
-//			mspLogger.Debug("Signing identity expires at", expirationTime)
+			//			mspLogger.Debug("Signing identity expires at", expirationTime)
 		} else if expirationTime.IsZero() {
-//			mspLogger.Debug("Signing identity has no known expiration time")
+			//			mspLogger.Debug("Signing identity has no known expiration time")
 		} else {
 			return errors.Errorf("signing identity expired %v ago", now.Sub(expirationTime))
 		}
@@ -308,7 +308,6 @@ func (msp *bccspmsp) validateTLSCAIdentity(cert *x509.Certificate, opts *x509.Ve
 
 	return msp.validateCertAgainstChain(cert, validationChain)
 }
-
 
 func (msp *bccspmsp) setupTLSCAs(conf *msppb.FabricMSPConfig) error {
 	opts := &x509.VerifyOptions{Roots: x509.NewCertPool(), Intermediates: x509.NewCertPool()}
@@ -361,7 +360,6 @@ func (msp *bccspmsp) setupTLSCAs(conf *msppb.FabricMSPConfig) error {
 
 	return nil
 }
-
 
 func (msp *bccspmsp) getCertifiersIdentifier(certRaw []byte) ([]byte, error) {
 	// 1. check that certificate is registered in msp.rootCerts or msp.intermediateCerts

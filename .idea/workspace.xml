@@ -1,7 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ab4085b-af77-416e-9977-6e8e36880c35" name="Default Changelist" comment="" />
+    <list default="true" id="6ab4085b-af77-416e-9977-6e8e36880c35" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/common/ledger/blkstorage/block_itr.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/blkstorage/block_serialization.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/blkstorage/block_stream.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/blkstorage/blockfile_helper.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/blkstorage/blockfile_mgr.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/blkstorage/blockfile_rw.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/blkstorage/blockindex.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/blkstorage/blockstore.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/blkstorage/blockstore_provider.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/blkstorage/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/blkstorage/protobuf_util.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/blkstorage/storage.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/blkstorage/storage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/dataformat/dataformats.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/ledger_interface.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/util/ioutil.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/util/leveldbhelper/leveldb_helper.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/util/leveldbhelper/leveldb_provider.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ledger/util/util.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/ledger/history/db.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/ledger/kvledger/idstore.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/ledger/kvledger/kvledger_provider.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/ledger/kvledger/ledger_filepath.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/ledger/kvledger/msgs/ledger_metadata.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/ledger/kvledger/msgs/ledger_metadata.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/ledger/kvledger/txmgmt/bookkeeping/provider.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/ledger/kvledger/txmgmt/privacyenabledstate/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/ledger/kvledger/txmgmt/privacyenabledstate/db.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/ledger/kvledger/txmgmt/statedb/satedb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/ledger/kvledger/txmgmt/statedb/stateleveldb/stateleveldb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/ledger/ledger_interface.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/ledger/ledgermgmt/ledger_mgmt.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/ledger/pvtdatastorage/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/ledger/pvtdatastorage/store.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/pkg/identity/identity.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/pkg/txflags/validation_flags.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/protoutil/blockutils.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/protoutil/commonutils.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/protoutil/proputils.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/protoutil/txutils.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/protoutil/unmarshalers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/node.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/node.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/peer/common/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/peer/common/common.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msp/configbuilder.go" beforeDir="false" afterPath="$PROJECT_DIR$/msp/configbuilder.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msp/factory.go" beforeDir="false" afterPath="$PROJECT_DIR$/msp/factory.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msp/identity.go" beforeDir="false" afterPath="$PROJECT_DIR$/msp/identity.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msp/manager.go" beforeDir="false" afterPath="$PROJECT_DIR$/msp/manager.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msp/msp.go" beforeDir="false" afterPath="$PROJECT_DIR$/msp/msp.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msp/mspimpl.go" beforeDir="false" afterPath="$PROJECT_DIR$/msp/mspimpl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msp/mspimplsetup.go" beforeDir="false" afterPath="$PROJECT_DIR$/msp/mspimplsetup.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +67,11 @@
     </option>
   </component>
   <component name="GOROOT" url="file:///usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1mmLgQck0Q1NOk3TtWVOIIgy1sb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -28,14 +84,20 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/github.com" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/ledger/util" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/vendor/github.com" />
-      <recent name="$PROJECT_DIR$/vendor/github.com/hyperledger" />
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/common/ledger/util" />
+      <recent name="$PROJECT_DIR$/internal/pkg/txflags" />
+      <recent name="$PROJECT_DIR$/protoutil" />
+      <recent name="$PROJECT_DIR$/common/ledger/blkstorage" />
+      <recent name="$PROJECT_DIR$/internal/pkg/identity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core/ledger/kvledger/txmgmt/statedb/stateleveldb" />
+      <recent name="$PROJECT_DIR$/core/ledger" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build node.go">
@@ -112,6 +174,18 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -7,8 +7,8 @@ import (
 	"encoding/asn1"
 	"fmt"
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/fabric/bccsp"
 	msppb "github.com/hyperledger/fabric-protos-go/msp"
+	"github.com/hyperledger/fabric/bccsp"
 	"github.com/pkg/errors"
 	"math/big"
 	"reflect"
@@ -16,23 +16,23 @@ import (
 )
 
 type bccspmsp struct {
-	name string //msp name
+	name         string //msp name
 	cryptoConfig *msppb.FabricCryptoConfig
-	CRL []*pkix.CertificateList
+	CRL          []*pkix.CertificateList
 	//msp 验证参数 保证证书链都在options
-	opts *x509.VerifyOptions
-	bccsp bccsp.BCCSP
-	ouIdentifiers map[string][][]byte
-	rootCerts []Identity
-	intermediateCerts []Identity
-	certificationTreeInternalNodesMap map[string]bool
-	signer SigningIdentity
-	tlsRootCerts [][]byte
-	tlsIntermediateCerts [][]byte
-	ouEnforcement bool
+	opts                                 *x509.VerifyOptions
+	bccsp                                bccsp.BCCSP
+	ouIdentifiers                        map[string][][]byte
+	rootCerts                            []Identity
+	intermediateCerts                    []Identity
+	certificationTreeInternalNodesMap    map[string]bool
+	signer                               SigningIdentity
+	tlsRootCerts                         [][]byte
+	tlsIntermediateCerts                 [][]byte
+	ouEnforcement                        bool
 	clientOU, peerOU, adminOU, ordererOU *OUIdentifier
-	admins []Identity
-	version MSPVersion
+	admins                               []Identity
+	version                              MSPVersion
 }
 
 func NewBccspMSP(opts NewOpts, cryptoProvider bccsp.BCCSP) (MSP, error) {

@@ -25,7 +25,6 @@ type NewBaseOpts struct {
 	mspType ProviderType
 }
 
-
 func (opts *NewBaseOpts) GetVersion() MSPVersion {
 	return opts.version
 }
@@ -35,14 +34,9 @@ func (opts *NewBaseOpts) GetMspType() ProviderType {
 }
 
 func New(opts NewOpts, cryptoProvider bccsp.BCCSP) (MSP, error) {
-	if opts.GetVersion() != MSPv1_4_3 || opts.GetMspType() != FABRIC{
+	if opts.GetVersion() != MSPv1_4_3 || opts.GetMspType() != FABRIC {
 		return nil, errors.New("now only support other msp type, except 1.4.3")
 	}
 	return NewBccspMSP(opts, cryptoProvider)
 
 }
-
-
-
-
-

@@ -23,6 +23,7 @@ func ProviderTypeToString(id ProviderType) string {
 
 	return ""
 }
+
 var Options = map[string]NewOpts{
 	ProviderTypeToString(FABRIC): &NewBaseOpts{version: MSPv1_4_3, mspType: FABRIC},
 }
@@ -107,7 +108,6 @@ type Identity interface {
 	// a serialized identity) or may require MSP validation
 	SatisfiesPrincipal(principal *msp.MSPPrincipal) error
 }
-
 
 type IdentityDeserializer interface {
 	// DeserializeIdentity deserializes an identity.

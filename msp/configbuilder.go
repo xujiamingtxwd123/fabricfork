@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"github.com/gogo/protobuf/proto"
 	"github.com/pkg/errors"
+	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"os"
 	"path/filepath"
-	"gopkg.in/yaml.v2"
 
 	msppb "github.com/hyperledger/fabric-protos-go/msp"
 	"github.com/hyperledger/fabric/bccsp"
@@ -62,8 +62,7 @@ type Configuration struct {
 	NodeOUs *NodeOUs `yaml:"NodeOUs,omitempty"`
 }
 
-
-func GetLocalMspConfig(dir string, localMspId string, bccspConfig *factory.FactoryOpts) (*msppb.MSPConfig, error){
+func GetLocalMspConfig(dir string, localMspId string, bccspConfig *factory.FactoryOpts) (*msppb.MSPConfig, error) {
 	signcertDir := filepath.Join(dir, signcerts)
 	keystoreDir := filepath.Join(dir, keystore)
 	cacertDir := filepath.Join(dir, cacerts)
@@ -74,7 +73,6 @@ func GetLocalMspConfig(dir string, localMspId string, bccspConfig *factory.Facto
 	tlscacertDir := filepath.Join(dir, tlscacerts)
 	tlsintermediatecertsDir := filepath.Join(dir, tlsintermediatecerts)
 
-
 	rootCert, err := getPemFromDir(cacertDir)
 	if err != nil {
 		return nil, err
@@ -84,7 +82,7 @@ func GetLocalMspConfig(dir string, localMspId string, bccspConfig *factory.Facto
 		return nil, errors.New("root cert is null")
 	}
 
-	signCert, err :=  getPemFromDir(signcertDir)
+	signCert, err := getPemFromDir(signcertDir)
 	if err != nil {
 		return nil, err
 	}
@@ -120,12 +118,11 @@ func GetLocalMspConfig(dir string, localMspId string, bccspConfig *factory.Facto
 				return nil, errors.Wrapf(err, "failed read ouID %s", ouID)
 			}
 			oui := &msppb.FabricOUIdentifier{
-				Certificate: content,
+				Certificate:                  content,
 				OrganizationalUnitIdentifier: ouID.OrganizationalUnitIdentifier,
 			}
 			ouis = append(ouis, oui)
 		}
-
 
 		if configuration.NodeOUs != nil && configuration.NodeOUs.Enable {
 			nodeOUs = &msppb.FabricNodeOUs{
@@ -192,20 +189,19 @@ func GetLocalMspConfig(dir string, localMspId string, bccspConfig *factory.Facto
 		return nil, err
 	}
 
-
-	mspid := &msppb.SigningIdentityInfo{PublicSigner:signCert[0]}
+	mspid := &msppb.SigningIdentityInfo{PublicSigner: signCert[0]}
 	fmspconf := &msppb.FabricMSPConfig{
-		Name: localMspId,
-		RootCerts: rootCert,
-		SigningIdentity: mspid,
-		Admins: adminCert,
-		IntermediateCerts: intermediateCert,
+		Name:                          localMspId,
+		RootCerts:                     rootCert,
+		SigningIdentity:               mspid,
+		Admins:                        adminCert,
+		IntermediateCerts:             intermediateCert,
 		OrganizationalUnitIdentifiers: ouis,
-		FabricNodeOus: nodeOUs, //TODO xjm  如何使用的
-		CryptoConfig: cryptoConfig,
-		TlsRootCerts: tlscaCert,
-		TlsIntermediateCerts: tlsIntermediateCerts,
-		RevocationList: crlsCert,
+		FabricNodeOus:                 nodeOUs, //TODO xjm  如何使用的
+		CryptoConfig:                  cryptoConfig,
+		TlsRootCerts:                  tlscaCert,
+		TlsIntermediateCerts:          tlsIntermediateCerts,
+		RevocationList:                crlsCert,
 	}
 	mspMarshal, _ := proto.Marshal(fmspconf)
 	mspconf := &msppb.MSPConfig{Config: mspMarshal, Type: int32(FABRIC)}

@@ -18,4 +18,3 @@ func main() {
 
 	fmt.Println("msp ok")
 }
-

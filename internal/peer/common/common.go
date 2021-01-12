@@ -10,7 +10,7 @@ import (
 	"github.com/hyperledger/fabric/bccsp/factory"
 )
 
-func LoadConfig() error{
+func LoadConfig() error {
 	viper.SetEnvPrefix("core")
 	viper.AutomaticEnv()
 	replacer := strings.NewReplacer(".", "_")
